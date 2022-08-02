@@ -1,0 +1,70 @@
+<html>
+<head>
+<script>
+function calculate1()
+{
+item=parseFloat(document.getElementById("item").value);
+rate=parseFloat(document.getElementById("rate").value);
+total=item*rate;
+document.getElementById("total").value=total;
+}
+
+function calculate2()
+{
+
+total=parseFloat(document.getElementById("total").value);
+discount=parseFloat(document.getElementById("discount").value);
+discountValue=total*discount/100;
+netTotal=total-discountValue;
+document.getElementById("discountValue").value=discountValue;
+document.getElementById("netTotal").value=netTotal;
+}
+
+function calculate3()
+{
+netTotal=parseFloat(document.getElementById("netTotal").value);
+gst=parseFloat(document.getElementById("gst").value);
+gstValue=netTotal*gst/100;
+grandTotal=netTotal+gstValue;
+document.getElementById("gstValue").value=gstValue;
+document.getElementById("grandTotal").value=grandTotal;
+}
+
+</script>
+<style>
+.css{font-size:55px;text-align:center;height:70px;color:black}
+
+</style>
+
+</head>                                                                       
+
+<body>
+
+
+<div class="css">INVOICE</div>
+<table border="1" cellpadding="10" align="center">
+<tr><td>Name</td><td><input type="text"></td></tr>
+<tr><td>Item</td><td><input type="text" id="item"></td></tr>
+<tr><td>Rate</td><td><input type="text" id="rate"></td></tr>
+<tr><td colspan="2" style="text-align:center"><input type="button" id="bcalculate" value="calculate1" onclick="calculate1()"></td></tr>
+<tr><td>Total</td><td><input type="text" id="total"></td></tr>
+<tr><td>Discount</td><td><input type="text" id="discount"></td></tr>
+<tr><td colspan="2" style="text-align:center"><input type="button" id="bcalculate" value="calculate2" onclick="calculate2()"></td></tr>
+<tr><td>Discount Value</td><td><input type="text" id="discountValue"></td></tr>
+<tr><td>Net Total</td><td><input type="text" id="netTotal"></td></tr>
+<tr><td>Gst</td><td><input type="text" id="gst"></td></tr>
+<tr><td colspan="2" style="text-align:center"><input type="button" id="bcalculate" value="calculate3" onclick="calculate3()"></td></tr>
+<tr><td>GstValue</td><td><input type="text" id="gstValue"></td></tr>
+<tr><td>Grand Total</td><td><input type="text" id="grandTotal"></td></tr>
+
+
+</table>
+</body>
+</html>
+
+
+
+
+
+
+
